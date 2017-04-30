@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+.application {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.length-calc {
+  width: 400px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.length-form {
+  flex: auto;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-around;
+  width: 96%;
+}
+
+.length-form input {
+  background-color: rgba(255, 555, 255, 0.9);
+  border-color: rgba(255, 555, 255, 0.9);
+  font-family: 'Roboto', sans-serif;
+  height: 40px;
+  font-size: 30px;
+  width: 393px;
+}
+
+.length-form input:focus {
+  outline-color: rgb(0, 255, 76);
+}

@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+html {
+  width: 100vw;
+  height: 100vh;
+}
+body {
+  caret-color: rgb(255, 0, 178);
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  /*background-image: url('../images/618378-water-drops-green-background_background-images.jpg');
+  background-position: center;
+  background-attachment: fixed;*/
+  background-color: rgb(40, 40, 40);
+}
