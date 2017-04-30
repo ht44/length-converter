@@ -11,7 +11,9 @@ class LengthConverter extends Component {
     this.handleChangeA = this.handleChangeA.bind(this);
     this.handleChangeB = this.handleChangeB.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
-    this.state = {value: '', unit: 'yards', unitA: 'yards', unitB: 'meters'};
+    this.state = {
+      value: '', unit: 'yards', unitA: 'yards', unitB: 'meters'
+    };
   }
 
   handleChangeA(ev) {
@@ -28,14 +30,20 @@ class LengthConverter extends Component {
   }
   handleSubmit(ev) {
     ev.preventDefault();
-    if (validateUnit(ev.target.inputA.value) && ev.target.inputA.value !== this.state.unitB) {
+    if (
+      validateUnit(ev.target.inputA.value) &&
+      ev.target.inputA.value !== this.state.unitB
+    ) {
       const VALUE = ev.target.inputA.value;
       this.setState(prevState => ({
         unit: VALUE,
         unitA: VALUE,
         value: ''
       }));
-    } else if (validateUnit(ev.target.inputB.value) && ev.target.inputB.value !== this.state.unitA) {
+    } else if (
+      validateUnit(ev.target.inputB.value) &&
+      ev.target.inputB.value !== this.state.unitA
+    ) {
       const VALUE = ev.target.inputB.value
       this.setState(prevState => ({
         unit: VALUE,
@@ -58,9 +66,19 @@ class LengthConverter extends Component {
     return (
       <div className="length-converter">
         <h1>{UNITA} | {UNITB}</h1>
-        <form className="length-form" onSubmit={this.handleSubmit} autoComplete="off">
-          <LengthInput name="inputA" value={VALUEA} unit={UNITA} onChange={this.handleChangeA} autoFocus="true" />
-          <LengthInput name="inputB" value={VALUEB} unit={UNITB} onChange={this.handleChangeB}/>
+        <form
+          className="length-form"
+          onSubmit={this.handleSubmit} autoComplete="off">
+          <LengthInput
+            name="inputA"
+            value={VALUEA}
+            unit={UNITA}
+            onChange={this.handleChangeA} autoFocus="true" />
+          <LengthInput
+            name="inputB"
+            value={VALUEB}
+            unit={UNITB}
+            onChange={this.handleChangeB} />
           <input type="submit" value="Submit" hidden/>
         </form>
       </div>
