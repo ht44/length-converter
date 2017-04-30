@@ -56,7 +56,7 @@ class LengthConverter extends Component {
     const VALUEA = UNIT === UNITB ? convert(VALUE, BTOA) : VALUE;
     const VALUEB = UNIT === UNITA ? convert(VALUE, ATOB) : VALUE;
     return (
-      <div className="length-calc">
+      <div className="length-converter">
         <h1>{UNITA} | {UNITB}</h1>
         <form className="length-form" onSubmit={this.handleSubmit} autoComplete="off">
           <LengthInput name="inputA" value={VALUEA} unit={UNITA} onChange={this.handleChangeA} autoFocus="true" />

@@ -8,7 +8,7 @@ import {miToF, miToY, miToK, miToM, miToI, miToC} from './conversions/miles';
 
 function assignConversion(unitA, unitB) {
   switch(unitA + ' ' + unitB) {
-// FEET // ------------------------------------------ /////////////////////////
+// FEET // ------------------------------------------
     case 'feet yards':
       return fToY;
     case 'feet meters':
@@ -21,7 +21,7 @@ function assignConversion(unitA, unitB) {
       return fToK;
     case 'feet centimeters':
       return fToC;
-// YARDS // ----------------------------------------- /////////////////////////
+// YARDS // -----------------------------------------
     case 'yards feet':
       return yToF;
     case 'yards meters':
@@ -34,7 +34,7 @@ function assignConversion(unitA, unitB) {
       return yToI;
     case 'yards centimeters':
       return yToC;
-// MILES // ----------------------------------------- /////////////////////////
+// MILES // -----------------------------------------
     case 'miles feet':
       return miToF;
     case 'miles yards':
@@ -47,7 +47,7 @@ function assignConversion(unitA, unitB) {
       return miToI;
     case 'miles centimeters':
       return miToC;
-// KILOMETERS // ------------------------------------ /////////////////////////
+// KILOMETERS // ------------------------------------
     case 'kilometers feet':
       return kToF;
     case 'kilometers yards':
@@ -60,7 +60,7 @@ function assignConversion(unitA, unitB) {
       return kToI;
     case 'kilometers centimeters':
       return kToC;
-// METERS // ---------------------------------------- /////////////////////////
+// METERS // ----------------------------------------
     case 'meters yards':
       return mToY;
     case 'meters feet':
@@ -73,7 +73,7 @@ function assignConversion(unitA, unitB) {
       return mToI;
     case 'meters centimeters':
       return mToC;
-// INCHES // ---------------------------------------- /////////////////////////
+// INCHES // ----------------------------------------
     case 'inches feet':
       return iToF;
     case 'inches centimeters':
@@ -86,7 +86,7 @@ function assignConversion(unitA, unitB) {
       return iToMi;
     case 'inches yards':
       return iToY;
-// CENTIMETERS // ----------------------------------- /////////////////////////
+// CENTIMETERS // -----------------------------------
     case 'centimeters inches':
       return cToI;
     case 'centimeters feet':
@@ -99,7 +99,7 @@ function assignConversion(unitA, unitB) {
       return cToM;
     case 'centimeters kilometers':
       return cToK;
-// DEFAULT // --------------------------------------- /////////////////////////
+// DEFAULT // --------------------------------------- 
     default:
     return function (value) {
       return value;

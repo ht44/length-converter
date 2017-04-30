@@ -9,7 +9,7 @@
   align-items: center;
 }
 
-.length-calc {
+.length-converter {
   width: 400px;
   display: flex;
   flex-flow: row wrap;
