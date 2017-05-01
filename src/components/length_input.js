@@ -14,9 +14,9 @@ class LengthInput extends Component {
     return (
       <input
         type="text"
-        autoFocus={this.props.autoFocus}
         name={this.props.name}
         value={this.props.value}
+        autoFocus={this.props.autoFocus}
         placeholder={this.props.unit}
         onChange={this.handleChange} />
     );
