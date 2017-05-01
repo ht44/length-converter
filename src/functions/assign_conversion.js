@@ -5,6 +5,7 @@ import {fToM, fToY, fToI, fToMi, fToK, fToC} from './conversions/feet';
 import {cToI, cToF, cToY, cToMi, cToM, cToK} from './conversions/centimeters';
 import {kToF, kToY, kToMi, kToM, kToI, kToC} from './conversions/kilometers';
 import {miToF, miToY, miToK, miToM, miToI, miToC} from './conversions/miles';
+import mirror from './conversions/mirror';
 
 function assignConversion(unitA, unitB) {
   switch(unitA + ' ' + unitB) {
@@ -99,11 +100,9 @@ function assignConversion(unitA, unitB) {
       return cToM;
     case 'centimeters kilometers':
       return cToK;
-// DEFAULT // --------------------------------------- 
+// DEFAULT // ---------------------------------------
     default:
-    return function (value) {
-      return value;
-    }
+      return mirror;
   }
 }
 
