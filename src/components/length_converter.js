@@ -1,9 +1,10 @@
 // Calculator widget
 import React, { Component } from 'react';
-import convert from '../functions/convert';
-import assignConversion from '../functions/assign_conversion';
-import validateUnit from '../functions/validate_unit';
 import LengthInput from './length_input';
+import HiddenSubmit from './hidden_submit';
+import validateUnit from '../functions/validate_unit';
+import assignConversion from '../functions/assign_conversion';
+import convert from '../functions/convert';
 
 class LengthConverter extends Component {
   constructor(props) {
@@ -24,8 +25,9 @@ class LengthConverter extends Component {
   }
   handleSubmit(ev) {
     if (validateUnit(ev.target.inputA.value) || validateUnit(ev.target.inputB.value)) {
-      if (this.state.inputA) this.setState({unitA: ev.target.inputA.value, value: ''});
-      if (!this.state.inputA) this.setState({unitB: ev.target.inputB.value, value: ''});
+      this.state.inputA ?
+        this.setState({unitA: ev.target.inputA.value, value: ''}) : 
+        this.setState({unitB: ev.target.inputB.value, value: ''});
     } else {
       this.setState({value: ''});
     }
@@ -37,20 +39,20 @@ class LengthConverter extends Component {
     const ATOB = assignConversion(this.state.unitA, this.state.unitB);
     const BTOA = assignConversion(this.state.unitB, this.state.unitA);
     return (
+
       <div className="length-converter">
         <h1>{this.state.unitA} | {this.state.unitB}</h1>
         <form onSubmit={this.handleSubmit} autoComplete="off">
           <LengthInput name="inputA"
-            unit={this.state.unitA}
-            value={!this.state.inputA ? convert(VALUE, BTOA) : VALUE}
-            onChange={this.handleChangeA} autoFocus="true" />
+            unit={this.state.unitA} onChange={this.handleChangeA}  autoFocus="true"
+            value={this.state.inputA ? VALUE : convert(VALUE, BTOA)} />
           <LengthInput name="inputB"
-            unit={this.state.unitB}
-            value={this.state.inputA ? convert(VALUE, ATOB) : VALUE}
-            onChange={this.handleChangeB} />
-          <input type="submit" value="Submit" hidden/>
+            unit={this.state.unitB} onChange={this.handleChangeB}
+            value={this.state.inputA ? convert(VALUE, ATOB) : VALUE} />
+          <HiddenSubmit />
         </form>
       </div>
+
     );
   }
 }
