@@ -1,5 +1,5 @@
-import '../App.css';
 import React, { Component } from 'react';
+import '../App.css';
 import convert from '../functions/convert';
 import assignConversion from '../functions/assign_conversion';
 import validateUnit from '../functions/validate_unit';
@@ -12,7 +12,7 @@ class LengthConverter extends Component {
     this.handleChangeB = this.handleChangeB.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
     this.state = {
-      value: '', unitA: 'yards', unitB: 'meters', inputA: true
+      value: '', unitA: 'miles', unitB: 'feet', inputA: true
     };
   }
 
@@ -23,13 +23,13 @@ class LengthConverter extends Component {
     this.setState({inputA: false, value: ev.target.value});
   }
   handleSubmit(ev) {
-    ev.preventDefault();
     if (validateUnit(ev.target.inputA.value) || validateUnit(ev.target.inputB.value)) {
       if (this.state.inputA) this.setState({unitA: ev.target.inputA.value, value: ''});
       if (!this.state.inputA) this.setState({unitB: ev.target.inputB.value, value: ''});
     } else {
       this.setState({value: ''});
     }
+    ev.preventDefault();
   }
 
   render() {
@@ -39,16 +39,12 @@ class LengthConverter extends Component {
     return (
       <div className="length-converter">
         <h1>{this.state.unitA} | {this.state.unitB}</h1>
-        <form
-          className="length-form"
-          onSubmit={this.handleSubmit} autoComplete="off">
-          <LengthInput
-            name="inputA"
+        <form onSubmit={this.handleSubmit} autoComplete="off">
+          <LengthInput name="inputA"
             unit={this.state.unitA}
             value={!this.state.inputA ? convert(VALUE, BTOA) : VALUE}
             onChange={this.handleChangeA} autoFocus="true" />
-          <LengthInput
-            name="inputB"
+          <LengthInput name="inputB"
             unit={this.state.unitB}
             value={this.state.inputA ? convert(VALUE, ATOB) : VALUE}
             onChange={this.handleChangeB} />
