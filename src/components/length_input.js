@@ -1,4 +1,4 @@
-// Reponsive input
+// Reponsive length input
 import React, { Component } from 'react';
 
 class LengthInput extends Component {

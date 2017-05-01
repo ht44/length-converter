@@ -26,7 +26,7 @@ class LengthConverter extends Component {
   handleSubmit(ev) {
     if (validateUnit(ev.target.inputA.value) || validateUnit(ev.target.inputB.value)) {
       this.state.inputA ?
-        this.setState({unitA: ev.target.inputA.value, value: ''}) : 
+        this.setState({unitA: ev.target.inputA.value, value: ''}) :
         this.setState({unitB: ev.target.inputB.value, value: ''});
     } else {
       this.setState({value: ''});
@@ -39,7 +39,6 @@ class LengthConverter extends Component {
     const ATOB = assignConversion(this.state.unitA, this.state.unitB);
     const BTOA = assignConversion(this.state.unitB, this.state.unitA);
     return (
-
       <div className="length-converter">
         <h1>{this.state.unitA} | {this.state.unitB}</h1>
         <form onSubmit={this.handleSubmit} autoComplete="off">
@@ -52,7 +51,6 @@ class LengthConverter extends Component {
           <HiddenSubmit />
         </form>
       </div>
-
     );
   }
 }

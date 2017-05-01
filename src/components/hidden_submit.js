@@ -1,3 +1,4 @@
+// Hidden submit input
 import React from 'react';
 
 function HiddenSubmit(props) {
