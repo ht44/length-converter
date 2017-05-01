@@ -7,6 +7,6 @@ body {
   width: 100vw;
   height: 100vh;
   font-family: 'Roboto', sans-serif;
-  background-image: url('../images/618378-water-drops-green-background_background-images.jpg');
+  background-image: url('../../images/618378-water-drops-green-background_background-images.jpg');
   background-position: center;
 }

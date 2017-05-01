@@ -1,5 +1,5 @@
+// Reponsive input
 import React, { Component } from 'react';
-import '../App.css';
 
 class LengthInput extends Component {
   constructor(props) {
@@ -24,3 +24,4 @@ class LengthInput extends Component {
 }
 
 export default LengthInput;
+//

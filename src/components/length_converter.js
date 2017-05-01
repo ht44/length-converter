@@ -1,5 +1,5 @@
+// Calculator widget
 import React, { Component } from 'react';
-import '../App.css';
 import convert from '../functions/convert';
 import assignConversion from '../functions/assign_conversion';
 import validateUnit from '../functions/validate_unit';
@@ -17,10 +17,10 @@ class LengthConverter extends Component {
   }
 
   handleChangeA(ev) {
-    this.setState({inputA: true, value: ev.target.value});
+    this.setState({value: ev.target.value, inputA: true});
   }
   handleChangeB(ev) {
-    this.setState({inputA: false, value: ev.target.value});
+    this.setState({value: ev.target.value, inputA: false});
   }
   handleSubmit(ev) {
     if (validateUnit(ev.target.inputA.value) || validateUnit(ev.target.inputB.value)) {
@@ -56,3 +56,4 @@ class LengthConverter extends Component {
 }
 
 export default LengthConverter;
+//
