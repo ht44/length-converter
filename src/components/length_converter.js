@@ -40,6 +40,8 @@ class LengthConverter extends Component {
     const BTOA = assignConversion(this.state.unitB, this.state.unitA);
     return (
       <div className="length-converter">
+        <p>* Type a unit of length in the plural and hit return to change conversion</p>
+        <p>* Use left and right arrow keys to focus top and bottom inputs, respectively</p>
         <h1>{this.state.unitA} | {this.state.unitB}</h1>
         <form onSubmit={this.handleSubmit} autoComplete="off">
           <LengthInput name="inputA"

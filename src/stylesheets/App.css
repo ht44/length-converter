@@ -16,6 +16,7 @@
   justify-content: space-between;
   align-items: center;
   color: white;
+  text-shadow: 5px 5px 6px #000000;
 }
 
 .length-converter > form {
@@ -27,12 +28,13 @@
 }
 
 .length-converter > form > input {
-  background-color: rgba(255, 555, 255, 0.9);
+  background-color: rgba(255, 555, 255, 0.78);
   border-color: rgba(255, 555, 255, 0.9);
   font-family: 'Roboto', sans-serif;
   height: 40px;
   font-size: 30px;
   width: 393px;
+  box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
 }
 
 .length-converter > form > input:focus {
