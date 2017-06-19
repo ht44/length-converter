@@ -4,7 +4,7 @@ import App from './App';
 import './stylesheets/index.css';
 
 window.onload = function () {
-  window.onkeydown = function(ev) {
+  window.onkeydown = (ev) => {
     if (ev.keyCode === 37) {
       document.querySelector("input[name='inputA']").focus();
     } else if (ev.keyCode === 39) {
