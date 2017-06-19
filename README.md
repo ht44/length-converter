@@ -6,7 +6,7 @@ The user may type a unit of length in the plural (i.e. "meters" or "yards") and 
 
 These design decisions were inspired by my dislike of touchpads. I wanted to make a conversion calculator that could be operated entirely by keystroke.
 
-Here is the code for the main component. Can convert meters to yards to miles to kilometers to feet to inches to centimeters:
+Here is the code for the main component. Can convert meters to yards to miles to kilometers to feet to inches to centimeters. Hit return to clear:
 
 ```javascript
 // Calculator widget
