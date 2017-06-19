@@ -1,5 +1,7 @@
 [https://length-converter.surge.sh/](https://length-converter.surge.sh/)
 
+![Screenshot](./images/length_converter.png?raw=true)
+
 This is a neat little length conversion widget I made to teach myself React. It uses two-way data binding to instantly render a new result whenever there's a change to the values of the inputs.
 
 The user may type a unit of length in the plural (i.e. "meters" or "yards") and hit return to change the conversion equation. The left and right arrow keys will focus the top and bottom inputs, respectively.
